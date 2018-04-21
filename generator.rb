@@ -40,9 +40,11 @@ def print_teams(teams)
       output += ","
     end
 
-    output += team.constructor.name
+    output += "   | Constructor: #{team.constructor.name}"
 
-    output += "--- #{team.points}"
+    output += "   | average points of this team so far: #{team.points.round(2)}"
+
+    output += "   | cost: #{team.cost}"
 
 
     puts output

@@ -2,12 +2,11 @@ class Constructor
   attr_accessor :cost, :name, :points
 
   def initialize(constructornumber)
-    populate_name_and_cost(constructornumber)
-    populate_points
+    populate_constructor(constructornumber)
   end
 
   private
-  def populate_name_and_cost(constructornumber)
+  def populate_constructor(constructornumber)
     numraces = 3
     case constructornumber
     when 1
@@ -55,7 +54,4 @@ class Constructor
     @points /= numraces.to_f
   end
 
-  def populate_points
-    @points = 0
-  end
 end

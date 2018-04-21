@@ -107,7 +107,8 @@ class Driver
       @points = 98
     end
 
-      @averagepointsperrace = history.inject{ |sum, el| sum + el }.to_f / history.size
+    @averagepointsperrace = history.inject{ |sum, el| sum + el }.to_f / history.size
+    @points = @averagepointsperrace
   end
 
 end

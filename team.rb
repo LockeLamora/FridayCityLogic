@@ -29,7 +29,9 @@ class Team
       drivercost += driver.cost
     end
 
-    if (drivercost + teamcost) > threshold
+    @cost = drivercost + teamcost
+
+    if @cost > threshold
       @active = false
     end
   end
