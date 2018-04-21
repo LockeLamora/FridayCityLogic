@@ -33,12 +33,17 @@ def print_teams(teams)
     end
     output = ""
     for driver in team.drivers
-      output+= "#{driver.name}, "
+      output+= "#{driver.name}"
+      if driver.name == team.turbo.name
+        output+= "(T)"
+      end
+      output += ","
     end
 
     output += team.constructor.name
 
     output += "--- #{team.points}"
+
 
     puts output
   end

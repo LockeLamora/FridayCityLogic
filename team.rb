@@ -13,8 +13,8 @@ class Team
 
     @constructor = Constructor.new(constructornumber)
     is_under_cost_threshold
+    calculate_turbo_driver
     calculate_points
-
   end
 
   private
@@ -40,6 +40,18 @@ class Team
     end
 
     @points += @constructor.points
+    @points += @turbo.averagepointsperrace
+  end
+
+  def calculate_turbo_driver
+    @turbo = nil
+    turbopoints = -9999999
+    @drivers.each do |driver|
+      if driver.averagepointsperrace > turbopoints
+        @turbo = driver
+        turbopoints = driver.averagepointsperrace
+      end
+    end
   end
 
 
