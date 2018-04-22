@@ -6,6 +6,7 @@ class Constructor
   end
 
   private
+  
   def populate_constructor(constructornumber)
     numraces = 3
     case constructornumber
