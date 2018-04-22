@@ -17,7 +17,7 @@ class Team
       calculate_turbo_driver
       calculate_points
     end
-    
+
   end
 
   private
@@ -58,10 +58,5 @@ class Team
       end
     end
   end
-
-
-
-
-
-
+  
 end
