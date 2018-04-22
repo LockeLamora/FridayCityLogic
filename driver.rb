@@ -10,6 +10,7 @@ class Driver
 
   def populate_driver
     history = [0]
+    numraces = 3
     case @number
     when 1
       @cost = 11.5
@@ -108,7 +109,7 @@ class Driver
     end
 
     @averagepointsperrace = history.inject{ |sum, el| sum + el }.to_f / history.size
-    @points = @averagepointsperrace
+    @points /= numraces.to_f
   end
 
 end
