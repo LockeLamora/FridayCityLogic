@@ -1,4 +1,4 @@
-# ColdRaceAcademy
+# Friday City Logic
 A fantasy formula 1 team generator for fantasy.formula1.com
 
 running generator.rb will output all possible combinations in descending order of points
