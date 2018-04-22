@@ -13,8 +13,11 @@ class Team
 
     @constructor = Constructor.new(constructornumber)
     is_under_cost_threshold
-    calculate_turbo_driver
-    calculate_points
+    if @active
+      calculate_turbo_driver
+      calculate_points
+    end
+    
   end
 
   private
