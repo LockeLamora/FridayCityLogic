@@ -9,8 +9,8 @@ class Driver
   private
 
   def populate_driver
-    history = [0]
     numraces = 3
+    costthreshold = 19
     case @number
     when 1
       @cost = 11.5
@@ -21,6 +21,7 @@ class Driver
       @cost = 25.3
       @name = 'Bottas'
       @points = 93
+      history = [19, 37, 37]
     when 3
       @cost = 5.5
       @name = 'Ericsson'
@@ -40,6 +41,7 @@ class Driver
       @cost = 29.8
       @name = 'Hamilton'
       @points = 94
+      history = [35, 36, 23]
     when 7
       @cost = 6.5
       @name = 'Hartley'
@@ -74,10 +76,12 @@ class Driver
       @cost = 20
       @name = 'Raikonnen'
       @points = 54
+      history = [28, -3, 29]
     when 14
       @cost = 20.5
       @name = 'Ricciardo'
       @points = 76
+      history = [33, -4, 47]
     when 15
       @cost = 9.5
       @name = 'Sainz'
@@ -102,13 +106,20 @@ class Driver
       @cost = 19.7
       @name = 'Verstappen'
       @points = 26
+      history = [17, -13, 22]
     when 20
       @cost = 28
       @name = 'Vettel'
       @points = 98
+      history = [44, 44, 10]
     end
 
-    @averagepointsperrace = history.inject{ |sum, el| sum + el }.to_f / history.size
+    if @cost <= costthreshold
+      @averagepointsperrace = history.inject{ |sum, el| sum + el }.to_f / history.size
+    else
+      @averagepointsperrace = 0
+    end
+
     @points /= numraces.to_f
   end
 
