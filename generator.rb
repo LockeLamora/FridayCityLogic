@@ -17,7 +17,7 @@ def generate_inter_change_suggestions
   File.open('myteam').each do |line|
     myteam.push(line)
   end
-  
+
   [0,1,2,3,4].each do |i|
       myteam[i] = Driver.new.name_to_number(myteam[i])
   end
@@ -36,9 +36,7 @@ def generate_inter_change_suggestions
     end
   end
 
-
   print_interrace_teams(teams)
-
 end
 
 def generate_initial_teams
@@ -48,7 +46,6 @@ def generate_initial_teams
   driversets = driverpossibilities.combination(numslots).to_a
 
   numconstructornumbers = 10
-
 
   teams=[]
 
@@ -61,7 +58,6 @@ def generate_initial_teams
 
   teams = teams.sort_by {|team| team.points}.reverse!
   print_teams(teams)
-
 end
 
 def print_teams(teams)
