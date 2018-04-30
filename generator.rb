@@ -36,6 +36,7 @@ def generate_inter_change_suggestions
     end
   end
 
+  teams = teams.sort_by {|team| team.points}.reverse!
   print_interrace_teams(teams)
 end
 
