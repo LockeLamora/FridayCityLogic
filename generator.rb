@@ -67,6 +67,8 @@ def print_teams(teams)
   puts '======================'
   puts 'NEW TEAMS FROM SCRATCH'
   puts '======================'
+  teams = teams[0..50]
+
   teams.each do |team|
     if team.active ==false
       next
