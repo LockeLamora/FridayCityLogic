@@ -13,7 +13,7 @@ class Constructor
       return 991
     when 'ferrari'
       return 992
-    when 'redbull'
+    when 'red bull'
       return 993
     when 'force india'
       return 994
@@ -49,7 +49,7 @@ class Constructor
       @points = 207
     when 993
       @cost = 19
-      @name = 'RedBull'
+      @name = 'Red Bull'
       @points = 139
     when 994
       @cost = 11
