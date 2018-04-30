@@ -66,7 +66,7 @@ class Constructor
     when 997
       @cost = 7.8
       @name = 'Toro Rosso'
-      @points = 46
+      @points = 38
     when 998
       @cost = 5.5
       @name = 'Haas'
@@ -74,11 +74,11 @@ class Constructor
     when 999
       @cost = 9.7
       @name = 'McLaren'
-      @points = 130
+      @points = 126
     when 1000
       @cost = 5.7
       @name = 'Sauber'
-      @points = 79
+      @points = 71
     end
 
     @points /= numraces.to_f
