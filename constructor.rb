@@ -1,8 +1,37 @@
 class Constructor
   attr_accessor :cost, :name, :points
 
-  def initialize(constructornumber)
-    populate_constructor(constructornumber)
+  def initialize(constructornumber=nil)
+    if constructornumber
+      populate_constructor(constructornumber)
+    end
+  end
+
+  def name_to_number(name)
+    case name.downcase.strip
+    when 'mercedes'
+      return 1
+    when 'ferrari'
+      return 2
+    when 'redbull'
+      return 3
+    when 'force india'
+      return 4
+    when 'williams'
+      return 5
+    when 'renault'
+      return 6
+    when 'toro rosso'
+      return 7
+    when 'haas'
+      return 8
+    when 'mclaren'
+      return 9
+    when 'sauber'
+      return 10
+    else
+      puts 'cannot read constructor name:' + name
+    end
   end
 
   private

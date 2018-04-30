@@ -1,9 +1,58 @@
 class Driver
   attr_accessor :cost, :name, :number, :points, :averagepointsperrace
 
-  def initialize(number)
+  def initialize(number=nil)
     @number = number
-    populate_driver
+    if @number
+      populate_driver
+    end
+  end
+
+  def name_to_number(name)
+    case name.downcase.strip
+    when 'alonso'
+      return 1
+    when 'bottas'
+      return 2
+    when 'ericsson'
+      return 3
+    when 'gasly'
+      return 4
+    when 'grosjean'
+      return 5
+    when 'Hamilton'
+      return 6
+    when 'Hartley'
+      return 7
+    when 'hulkenberg'
+      return 8
+    when 'leclerc'
+      return 9
+    when 'magnussen'
+      return 10
+    when 'ocon'
+      return 11
+    when 'perez'
+      return 12
+    when 'raikonnen'
+      return 13
+    when 'ricciardo'
+      return 14
+    when 'sainz'
+      return 15
+    when 'sirotkin'
+      return 16
+    when 'stroll'
+      return 17
+    when 'vandoorne'
+      return 18
+    when 'verstappen'
+      return 19
+    when 'vettel'
+      return 20
+    else
+      puts 'cannot read driver name:'+name
+    end
   end
 
   private

@@ -2,8 +2,28 @@ require_relative 'driver'
 require_relative 'team'
 require_relative 'constructor'
 
+def generate_inter_change_suggestions
 
-def main
+  if !File.exist?('myteam')
+    return
+  end
+
+  teamnames = []
+  File.open('myteam').each do |line|
+    teamnames.push(line)
+  end
+
+
+  [0,1,2,3,4].each do |i|
+      teamnames[i] = Driver.new.name_to_number(teamnames[i])
+  end
+
+  teamnames[5] = Constructor.new.name_to_number(teamnames[5])
+
+  
+end
+
+def generate_initial_teams
   numdrivers = 20
   numslots = 5
   driverpossibilities =*(1..numdrivers)
@@ -50,4 +70,4 @@ end
 
 
 
-main()
+generate_inter_change_suggestions()
