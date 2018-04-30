@@ -2,16 +2,18 @@ require_relative 'driver'
 require_relative 'team'
 require_relative 'constructor'
 
+@numdrivers = 20
+@numslots = 5
+@numconstructornumbers = 10
+driverpossibilities =*(1..@numdrivers)
+@driversets = driverpossibilities.combination(@numslots).to_a
+
 def generate_inter_change_suggestions
 
   if !File.exist?('myteam')
     return
   end
-  numdrivers = 20
-  numslots = 5
-  numconstructornumbers = 10
-  driverpossibilities =*(1..numdrivers)
-  driversets = driverpossibilities.combination(numslots).to_a
+
 
   myteam = []
   File.open('myteam').each do |line|
@@ -28,8 +30,8 @@ def generate_inter_change_suggestions
 
   teams=[]
 
-  driversets.each do |driverset|
-    (991..(991+numconstructornumbers-1)).each do |constructornumber|
+  @driversets.each do |driverset|
+    (991..(991+@numconstructornumbers-1)).each do |constructornumber|
       teamtemp = Team.new(driverset, constructornumber)
       arraytemp = driverset + [constructornumber]
       if (myteam & arraytemp).length >=5
@@ -43,17 +45,13 @@ def generate_inter_change_suggestions
 end
 
 def generate_initial_teams
-  numdrivers = 20
-  numslots = 5
-  driverpossibilities =*(1..numdrivers)
-  driversets = driverpossibilities.combination(numslots).to_a
 
-  numconstructornumbers = 10
+  @numconstructornumbers = 10
 
   teams=[]
 
-  driversets.each do |driverset|
-    (991..(991+numconstructornumbers-1)).each do |constructornumber|
+  @driversets.each do |driverset|
+    (991..(991+@numconstructornumbers-1)).each do |constructornumber|
       teamtemp = Team.new(driverset, constructornumber)
       teams.push teamtemp
     end
