@@ -75,7 +75,7 @@ class Driver
       @cost = 5.5
       @name = 'Ericsson'
       @points = 20
-      history = [-12, 19, 13, 16]
+      history = [-12, 19, 13, 12]
     when 4
       @cost = 7.2
       @name = 'Gasly'
@@ -95,7 +95,7 @@ class Driver
       @cost = 6.6
       @name = 'Hartley'
       @points = -4
-      history = [9, -2, -11, 18]
+      history = [9, -2, -11, 10]
     when 8
       @cost = 11.5
       @name = 'Hulkenberg'
@@ -105,7 +105,7 @@ class Driver
       @cost = 5.5
       @name = 'Leclerc'
       @points = 31
-      history = [15, 12, 4, 30]
+      history = [15, 12, 4, 26]
     when 10
       @cost = 7.4
       @name = 'Magnussen'
@@ -150,7 +150,7 @@ class Driver
       @cost = 8
       @name = 'Vandoorne'
       @points = 31
-      history = [9, 17, 5, 18]
+      history = [9, 17, 5, 14]
     when 19
       @cost = 18.9
       @name = 'Verstappen'
