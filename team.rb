@@ -34,6 +34,7 @@ class Team
 
     @cost = drivercost + teamcost
 
+    @cost = @cost.round(2)
     if @cost > threshold
       @active = false
     end
