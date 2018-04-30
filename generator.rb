@@ -7,20 +7,38 @@ def generate_inter_change_suggestions
   if !File.exist?('myteam')
     return
   end
+  numdrivers = 20
+  numslots = 5
+  numconstructornumbers = 10
+  driverpossibilities =*(1..numdrivers)
+  driversets = driverpossibilities.combination(numslots).to_a
 
-  teamnames = []
+  myteam = []
   File.open('myteam').each do |line|
-    teamnames.push(line)
+    myteam.push(line)
   end
-
-
-  [0,1,2,3,4].each do |i|
-      teamnames[i] = Driver.new.name_to_number(teamnames[i])
-  end
-
-  teamnames[5] = Constructor.new.name_to_number(teamnames[5])
-
   
+  [0,1,2,3,4].each do |i|
+      myteam[i] = Driver.new.name_to_number(myteam[i])
+  end
+
+  myteam[5] = Constructor.new.name_to_number(myteam[5])
+
+  teams=[]
+
+  driversets.each do |driverset|
+    (991..(991+numconstructornumbers-1)).each do |constructornumber|
+      teamtemp = Team.new(driverset, constructornumber)
+      arraytemp = driverset + [constructornumber]
+      if (myteam & arraytemp).length >=5
+      teams.push teamtemp
+    end
+    end
+  end
+
+
+  print_interrace_teams(teams)
+
 end
 
 def generate_initial_teams
@@ -35,7 +53,7 @@ def generate_initial_teams
   teams=[]
 
   driversets.each do |driverset|
-    (1..numconstructornumbers).each do |constructornumber|
+    (991..(991+numconstructornumbers-1)).each do |constructornumber|
       teamtemp = Team.new(driverset, constructornumber)
       teams.push teamtemp
     end
@@ -47,6 +65,9 @@ def generate_initial_teams
 end
 
 def print_teams(teams)
+  puts '======================'
+  puts 'NEW TEAMS FROM SCRATCH'
+  puts '======================'
   teams.each do |team|
     if team.active ==false
       next
@@ -68,6 +89,32 @@ def print_teams(teams)
   end
 end
 
+def print_interrace_teams(teams)
+  puts '=========================='
+  puts 'TRADES THIS RACE'
+  puts '=========================='
+  teams.each do |team|
+    if team.active ==false
+      next
+    end
+    output = ""
+    for driver in team.drivers
+      output+= "#{driver.name}"
+      if driver.name == team.turbo.name
+        output+= "(T)"
+      end
+      output += ","
+    end
+
+    output += "   | Constructor: #{team.constructor.name}"
+    output += "   | average points of this team so far: #{team.points.round(2)}"
+    output += "   | cost: #{team.cost}"
+
+    puts output
+  end
+end
+
 
 
 generate_inter_change_suggestions()
+generate_initial_teams()
