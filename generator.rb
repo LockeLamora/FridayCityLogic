@@ -18,6 +18,8 @@ def generate_inter_change_suggestions
     myteam.push(line)
   end
 
+  puts 'Your current team:'
+  puts myteam
   [0,1,2,3,4].each do |i|
       myteam[i] = Driver.new.name_to_number(myteam[i])
   end
