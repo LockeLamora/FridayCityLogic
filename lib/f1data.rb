@@ -19,12 +19,40 @@ class F1Data
     @constructors["#{constructor.downcase}"]
   end
 
-  def get_num_constructors
-    @constructors.length
-  end
-
   def get_all_constructors
     @constructors
+  end
+
+  def generate_teams_list(myteam=nil)
+  teams = []
+  driversets = generate_driverset
+  constructor_names = generate_constructorset
+
+  driversets.each do |driverset|
+    (constructor_names).each do |constructor|
+      teamtemp = Team.new(self, driverset, constructor)
+      arraytemp = driverset + [constructor]
+
+      if myteam.nil?
+        teams.push teamtemp
+      elsif (myteam & arraytemp).length >= 5
+        teams.push teamtemp
+      end
+    end
+  end
+
+  teams
+  end
+
+  private
+  def generate_driverset
+    numslots = 5
+    names = @drivers.keys
+    names.combination(numslots).to_a
+  end
+
+  def generate_constructorset
+    @constructors.keys
   end
 
 end
