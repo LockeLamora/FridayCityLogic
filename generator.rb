@@ -28,18 +28,7 @@ def generate_inter_change_suggestions
     (constructor_names).each do |constructor|
       teamtemp = Team.new(@data, driverset, constructor)
       arraytemp = driverset + [constructor]
-      # puts '==============='
-      # puts arraytemp
-      # arraytemp.each do |test|
-      #   print test
-      # end
-      # puts '---------------'
-      # puts myteam
-      # myteam.each do |test|
-      #   print test
-      # end
-      # puts '----------------'
-      # puts (myteam & arraytemp)
+
       if (myteam & arraytemp).length >= 5
         teams.push teamtemp
       end
