@@ -4,7 +4,7 @@ class F1Data
   attr_accessor :drivers, :constructors
 
   def initialize()
-    file = File.read('data.json')
+    file = File.read('data/data.json')
     data_hash = JSON.parse(file)
 
     @drivers = data_hash['Drivers']

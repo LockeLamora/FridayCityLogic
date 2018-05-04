@@ -1,7 +1,7 @@
-require_relative 'driver'
-require_relative 'team'
-require_relative 'constructor'
-require_relative 'f1data'
+require_relative 'lib/driver'
+require_relative 'lib/team'
+require_relative 'lib/constructor'
+require_relative 'lib/f1data'
 
 
 @data = F1Data.new()
