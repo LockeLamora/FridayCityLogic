@@ -1,12 +1,10 @@
 require_relative 'driver'
 require_relative 'team'
 require_relative 'constructor'
+require_relative 'f1data'
 
-@numdrivers = 20
-@numslots = 5
-@numconstructornumbers = 10
-driverpossibilities =*(1..@numdrivers)
-@driversets = driverpossibilities.combination(@numslots).to_a
+
+@data = F1Data.new()
 
 def generate_inter_change_suggestions
 
@@ -14,29 +12,37 @@ def generate_inter_change_suggestions
     return
   end
 
-
   myteam = []
   File.open('myteam').each do |line|
-    myteam.push(line)
+    myteam.push(line.strip)
   end
 
   puts 'Your current team:'
   puts myteam
-  [0,1,2,3,4].each do |i|
-      myteam[i] = Driver.new.name_to_number(myteam[i])
-  end
-
-  myteam[5] = Constructor.new.name_to_number(myteam[5])
 
   teams=[]
 
-  @driversets.each do |driverset|
-    (991..(991+@numconstructornumbers-1)).each do |constructornumber|
-      teamtemp = Team.new(driverset, constructornumber)
-      arraytemp = driverset + [constructornumber]
-      if (myteam & arraytemp).length >=5
-      teams.push teamtemp
-    end
+  driversets = generate_driverset
+  constructor_names = generate_constructorset
+  driversets.each do |driverset|
+    (constructor_names).each do |constructor|
+      teamtemp = Team.new(@data, driverset, constructor)
+      arraytemp = driverset + [constructor]
+      # puts '==============='
+      # puts arraytemp
+      # arraytemp.each do |test|
+      #   print test
+      # end
+      # puts '---------------'
+      # puts myteam
+      # myteam.each do |test|
+      #   print test
+      # end
+      # puts '----------------'
+      # puts (myteam & arraytemp)
+      if (myteam & arraytemp).length >= 5
+        teams.push teamtemp
+      end
     end
   end
 
@@ -46,13 +52,13 @@ end
 
 def generate_initial_teams
 
-  @numconstructornumbers = 10
-
   teams=[]
 
-  @driversets.each do |driverset|
-    (991..(991+@numconstructornumbers-1)).each do |constructornumber|
-      teamtemp = Team.new(driverset, constructornumber)
+  driversets = generate_driverset
+  constructor_names = generate_constructorset
+  driversets.each do |driverset|
+    (constructor_names).each do |constructor|
+      teamtemp = Team.new(@data, driverset, constructor)
       teams.push teamtemp
     end
   end
@@ -93,7 +99,7 @@ def print_interrace_teams(teams)
   puts 'TRADES THIS RACE'
   puts '=========================='
   teams.each do |team|
-    if team.active ==false
+    if team.active == false
       next
     end
     output = ""
@@ -111,6 +117,16 @@ def print_interrace_teams(teams)
 
     puts output
   end
+end
+
+def generate_driverset
+  numslots = 5
+  names = @data.drivers.keys
+  names.combination(numslots).to_a
+end
+
+def generate_constructorset
+  @data.constructors.keys
 end
 
 

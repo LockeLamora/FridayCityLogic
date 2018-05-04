@@ -1,0 +1,126 @@
+{
+  "Drivers" : {
+    "alonso" : {
+      "cost": 11.8,
+      "points_history" : [28, 24, 24, 24]
+    },
+    "bottas" : {
+      "cost": 24.4,
+      "points_history" : [19, 37, 37, 7]
+    },
+    "ericsson" : {
+      "cost": 5.5,
+      "points_history" : [-12, 19, 13, 12]
+    },
+    "gasly" : {
+      "cost": 7.2,
+      "points_history" : [-14, 28, 4, 14]
+    },
+    "grosjean" : {
+      "cost": 6.3,
+      "points_history" :  [-8, 8, -3, -20]
+    },
+    "hamilton" : {
+      "cost": 30.1,
+      "points_history" : [35, 36, 23, 45]
+    },
+    "hartley" : {
+      "cost": 6.6,
+      "points_history" : [9, -2, -11, 10]
+    },
+    "hulkenberg" : {
+      "cost": 11.5,
+      "points_history" : [18, 22, 23, -8]
+    },
+    "leclerc" : {
+      "cost": 5.5,
+      "points_history" : [15, 12, 4, 26]
+    },
+    "magnussen" : {
+      "cost": 7.4,
+      "points_history" : [-5, 25, 9, 12]
+    },
+    "ocon" : {
+      "cost": 10.7,
+      "points_history" : [7, 8, 8, -6]
+    },
+    "perez" : {
+      "cost": 12.6,
+      "points_history" : [10, -1, 1, 35]
+    },
+    "raikonnen" : {
+      "cost": 20.4,
+      "points_history" : [28, -3, 29, 38]
+    },
+    "ricciardo" : {
+      "cost": 19.9,
+      "points_history" : [33, -4, 47, -3]
+    },
+    "sainz" : {
+      "cost": 10.3,
+      "points_history" : [9, 3, 8, 26]
+    },
+    "sirotkin" : {
+      "cost": 7.0,
+      "points_history" : [-14, 10, 6, -13]
+    },
+    "stroll" : {
+      "cost": 8.7,
+      "points_history" : [7, 15, 13, 16]
+    },
+    "vandoorne" : {
+      "cost": 8,
+      "points_history" : [9, 17, 5, 14]
+    },
+    "verstappen" : {
+      "cost": 18.9,
+      "points_history" : [17, -13, 22, -6]
+    },
+    "vettel" : {
+      "cost": 27.8,
+      "points_history" : [44, 44, 10, 22]
+    }
+  },
+  "Constructors" : {
+    "mercedes": {
+      "cost" : 30,
+      "points_history": [49, 69, 55, 42]
+    },
+    "ferrari": {
+      "cost" : 28,
+      "points_history": [67, 51, 34, 55]
+    },
+    "red bull": {
+      "cost" : 19,
+      "points_history": [45, 11, 64, 19]
+    },
+    "force india": {
+      "cost" : 11,
+      "points_history": [12, 2, 4, 39]
+    },
+    "williams": {
+      "cost" : 8.7,
+      "points_history": [-12, 20, 19, 13]
+    },
+    "renault": {
+      "cost" : 9.9,
+      "points_history": [22, 20, 26, 28]
+    },
+    "toro rosso": {
+      "cost" : 7.8,
+      "points_history": [-10, 21, 3, 24]
+    },
+    "haas": {
+      "cost" : 5.5,
+      "points_history": [15, 28, 1, 7]
+    },
+    "mclaren": {
+      "cost" : 9.7,
+      "points_history": [31, 36, 26, 33]
+    },
+    "sauber": {
+      "cost" : 5.7,
+      "points_history": [-2, 28, 12, 33]
+    }
+  }
+}

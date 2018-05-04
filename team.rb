@@ -1,17 +1,17 @@
 class Team
   attr_accessor :active, :drivers, :constructor, :cost, :turbo, :points
 
-  def initialize(drivernumbers, constructornumber)
+  def initialize(data, drivernames, constructorname)
     @active = true
     @drivers = []
     @points = 0
 
-    drivernumbers.each do |drivernumber|
-      tempdriver = Driver.new(drivernumber)
+    drivernames.each do |drivername|
+      tempdriver = Driver.new(data.get_driver(drivername), drivername)
       @drivers.push tempdriver
     end
 
-    @constructor = Constructor.new(constructornumber)
+    @constructor = Constructor.new(data.get_constructor(constructorname), constructorname)
     is_under_cost_threshold
     if @active
       calculate_turbo_driver
@@ -42,10 +42,10 @@ class Team
 
   def calculate_points
     drivers.each do |driver|
-      @points += driver.points
+      @points += driver.averagepointsperrace
     end
 
-    @points += @constructor.points
+    @points += @constructor.averagepointsperrace
     @points += @turbo.averagepointsperrace
   end
 
@@ -53,7 +53,7 @@ class Team
     @turbo = nil
     turbopoints = -9999999
     @drivers.each do |driver|
-      if driver.averagepointsperrace > turbopoints
+      if driver.averagepointsperrace > turbopoints and driver.cost <= 19
         @turbo = driver
         turbopoints = driver.averagepointsperrace
       end
