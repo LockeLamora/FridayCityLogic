@@ -41,7 +41,7 @@ class F1Data
     end
   end
 
-  teams
+  teams.sort_by {|team| team.points}.reverse!
   end
 
   private

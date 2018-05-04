@@ -21,13 +21,11 @@ def generate_inter_change_suggestions
   puts myteam
 
   teams = @data.generate_teams_list(myteam)
-  teams = teams.sort_by {|team| team.points}.reverse!
   print_interrace_teams(teams)
 end
 
 def generate_initial_teams
   teams = @data.generate_teams_list
-  teams = teams.sort_by {|team| team.points}.reverse!
   print_teams(teams)
 end
 
