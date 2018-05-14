@@ -54,3 +54,8 @@ def print_team_errors(errors)
   puts 'FAILED TO RECOGNISE THE FOLLOWING, PLEASE CHECK YOUR "myteam" FILE FOR SPELLING:'
   puts errors
 end
+
+def print_current_team(myteam)
+  puts 'Your current team:'
+  puts myteam
+end

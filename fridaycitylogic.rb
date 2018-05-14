@@ -23,8 +23,7 @@ def generate_inter_change_suggestions
     exit
   end
 
-  puts 'Your current team:'
-  puts myteam
+ print_current_team(myteam)
 
   teams = @data.generate_teams_list(myteam)
   print_interrace_teams(teams)
