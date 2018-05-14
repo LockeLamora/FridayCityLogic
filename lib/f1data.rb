@@ -57,6 +57,8 @@ class F1Data
       if myteam.nil?
         teams.push teamtemp
       elsif (myteam & arraytemp).length >= 5
+        teamtemp.set_out( myteam - arraytemp)
+        teamtemp.set_in( arraytemp - myteam)
         teams.push teamtemp
       end
     end

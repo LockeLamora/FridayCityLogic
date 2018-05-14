@@ -1,5 +1,5 @@
 class Team
-  attr_accessor :active, :drivers, :constructor, :cost, :turbo, :points
+  attr_accessor :active, :drivers, :constructor, :cost, :turbo, :points, :out, :in
 
   def initialize(data, drivernames, constructorname)
     @active = true
@@ -19,6 +19,21 @@ class Team
     end
 
   end
+
+  def set_out(teamout)
+    @out = teamout[0]
+    if @out.nil?
+      @out = 'N/A'
+    end
+  end
+
+  def set_in(teamin)
+    @in = teamin[0]
+    if @in.nil?
+      @in = 'N/A'
+    end
+  end
+
 
   private
 
