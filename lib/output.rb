@@ -54,6 +54,7 @@ def print_current_team(myteam)
 end
 
 def print_header(text)
+  puts "\n"
   puts '=========================='
   puts text
   puts '=========================='
@@ -68,14 +69,15 @@ def print_table_header(type=:header)
   header = vdivider + drivercolumn + vdivider + constructorscolumn + vdivider\
   + averagepointsheader + vdivider + costheader + vdivider
 
-  hdivider = '_' * header.length
+  hdivider = '_' * (header.length-1)
+  hdivider2 = '-' * (header.length-1)
 
   if type == :header
     puts hdivider
     puts header
-    puts hdivider
+    puts hdivider2
   else
-    puts hdivider
+    puts '|' + '-' * (header.length-3) + '|'
   end
 
 end
@@ -109,14 +111,14 @@ def print_interrace_table_header(type=:header)
   + teamoutcolumn + vdivider + teamincolumn + vdivider +\
 averagepointsheader + vdivider + costheader + vdivider
 
-  hdivider = '_' * header.length
-
+  hdivider = '_' * (header.length-1)
+  hdivider2 = '-' * (header.length-1)
   if type == :header
     puts hdivider
     puts header
-    puts hdivider
+    puts hdivider2
   else
-    puts hdivider
+    puts '|' + '-' * (header.length-3) + '|'
   end
 
 end
