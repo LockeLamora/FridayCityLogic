@@ -43,6 +43,7 @@ def print_interrace_teams(teams)
 end
 
 def print_team_errors(errors)
+  print_header('ERROR')
   puts 'FAILED TO RECOGNISE THE FOLLOWING, PLEASE CHECK YOUR "myteam" FILE FOR SPELLING:'
   puts errors
 end
