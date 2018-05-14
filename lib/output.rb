@@ -67,7 +67,7 @@ end
 
 def print_table_header(type=:header)
   drivercolumn = ' '*26 + 'DRIVERS' + ' '*26
-  vdivider = '|'
+  vdivider = '| '
   constructorscolumn = ' '*5 + 'CONSTRUCTOR' + ' '*5
   averagepointsheader = ' '* 5 + 'Avg Pts' + ' '* 5
   costheader = ' COST '
@@ -105,7 +105,7 @@ end
 
 def print_interrace_table_header(type=:header)
   drivercolumn = ' '*26 + 'DRIVERS' + ' '*26
-  vdivider = '|'
+  vdivider = '| '
   constructorscolumn = ' '*5 + 'CONSTRUCTOR' + ' '*5
   teamoutcolumn = ' '*6 + 'OUT' + ' '*6
   teamincolumn = ' '*6 + 'IN' + ' '*6
