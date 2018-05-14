@@ -1,7 +1,5 @@
 def print_teams(teams)
-  puts '======================'
-  puts 'NEW TEAMS FROM SCRATCH'
-  puts '======================'
+  print_header 'NEW TEAMS FROM SCRATCH:'
   teams = teams[0..50]
 
   teams.each do |team|
@@ -26,9 +24,7 @@ def print_teams(teams)
 end
 
 def print_interrace_teams(teams)
-  puts '=========================='
-  puts 'TRADES THIS RACE'
-  puts '=========================='
+  print_header('TRADES THIS RACE:')
   teams.each do |team|
     if team.active == false
       next
@@ -56,6 +52,12 @@ def print_team_errors(errors)
 end
 
 def print_current_team(myteam)
-  puts 'Your current team:'
+  print_header 'Your current team:'
   puts myteam
+end
+
+def print_header(text)
+  puts '=========================='
+  puts text
+  puts '=========================='
 end
