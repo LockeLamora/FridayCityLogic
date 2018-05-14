@@ -59,12 +59,6 @@ def print_header(text)
   puts '=========================='
 end
 
-def print_header(text)
-  puts '=========================='
-  puts text
-  puts '=========================='
-end
-
 def print_table_header(type=:header)
   drivercolumn = ' '*26 + 'DRIVERS' + ' '*26
   vdivider = '| '
