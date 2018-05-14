@@ -91,7 +91,7 @@ def print_table_footer
 end
 
 def printrow(drivers, constructor, cost, averagepointsperrace)
-  vdivider = '|'
+  vdivider = '| '
   drivers = drivers + (' ' * (59 - drivers.length))
   constructor = constructor + (' ' * (21 - constructor.length))
   cost = cost.to_s + (' ' * (6-cost.to_s.length))
@@ -132,7 +132,7 @@ def print_interrace_table_footer
 end
 
 def print_interrace_row(drivers, constructor, cost, averagepointsperrace, teamout, teamin)
-  vdivider = '|'
+  vdivider = '| '
   drivers = drivers + (' ' * (59 - drivers.length))
   constructor = constructor + (' ' * (21 - constructor.length))
   cost = cost.to_s + (' ' * (6-cost.to_s.length))
