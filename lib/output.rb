@@ -15,9 +15,9 @@ def print_teams(teams)
       end
       drivers += ","
     end
+    drivers = drivers[0...-1]
     printrow(drivers, team.constructor.name, team.cost, team.points.round(2))
   end
-
   print_table_footer
 end
 
@@ -36,11 +36,9 @@ def print_interrace_teams(teams)
       end
       drivers += ","
     end
-
+    drivers = drivers[0...-1]
     printrow(drivers, team.constructor.name,team.cost,team.points.round(2) )
-
   end
-
   print_table_footer
 end
 
