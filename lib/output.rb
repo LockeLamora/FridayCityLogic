@@ -13,9 +13,9 @@ def print_teams(teams)
       if driver.name == team.turbo.name
         drivers+= "(T)"
       end
-      drivers += ","
+      drivers += ", "
     end
-    drivers = drivers[0...-1]
+    drivers = drivers[0...-2]
     printrow(drivers, team.constructor.name, team.cost, team.points.round(2))
   end
   print_table_footer
