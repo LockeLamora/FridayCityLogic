@@ -60,7 +60,7 @@ def print_header(text)
 end
 
 def print_table_header(type=:header)
-  drivercolumn = ' '*21 + 'DRIVERS' + ' '*21
+  drivercolumn = ' '*26 + 'DRIVERS' + ' '*26
   vdivider = '|'
   constructorscolumn = ' '*5 + 'CONSTRUCTOR' + ' '*5
   averagepointsheader = ' '* 5 + 'Avg Pts' + ' '* 5
@@ -86,7 +86,7 @@ end
 
 def printrow(drivers, constructor, cost, averagepointsperrace)
   vdivider = '|'
-  drivers = drivers + (' ' * (49 - drivers.length))
+  drivers = drivers + (' ' * (59 - drivers.length))
   constructor = constructor + (' ' * (21 - constructor.length))
   cost = cost.to_s + (' ' * (6-cost.to_s.length))
   averagepointsperrace = averagepointsperrace.to_s + (' ' * (17-averagepointsperrace.to_s.length))
