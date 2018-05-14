@@ -17,6 +17,12 @@ def generate_inter_change_suggestions
     myteam.push(line.strip)
   end
 
+  teamerrors= @data.valid_input_check(myteam)
+  if teamerrors.length > 0
+    print_team_errors(teamerrors)
+    exit
+  end
+
   puts 'Your current team:'
   puts myteam
 

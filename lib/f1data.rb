@@ -12,15 +12,36 @@ class F1Data
   end
 
   def get_driver(driver_name)
+    if !@drivers.key? driver_name.downcase
+      false
+    end
     @drivers["#{driver_name.downcase}"]
   end
 
   def get_constructor(constructor)
+    if !@constructors.key? constructor.downcase
+      false
+    end
     @constructors["#{constructor.downcase}"]
   end
 
   def get_all_constructors
     @constructors
+  end
+
+  def valid_input_check(myteam)
+    errors=[]
+    myteam[0..4].each do |term|
+      if !get_driver(term)
+        errors.push(term)
+      end
+    end
+
+    if !get_constructor(myteam[5])
+      errors.push(myteam[5])
+    end
+
+    errors
   end
 
   def generate_teams_list(myteam=nil)

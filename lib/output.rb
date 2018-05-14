@@ -49,3 +49,8 @@ def print_interrace_teams(teams)
     puts output
   end
 end
+
+def print_team_errors(errors)
+  puts 'FAILED TO RECOGNISE THE FOLLOWING, PLEASE CHECK:'
+  puts errors
+end
