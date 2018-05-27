@@ -1,7 +1,7 @@
 require 'json'
 
 class F1Data
-  attr_accessor :drivers, :constructors
+  attr_accessor :drivers, :constructors, :budget
 
   def initialize()
     file = File.read('data/data.json')
@@ -9,6 +9,10 @@ class F1Data
 
     @drivers = data_hash['Drivers']
     @constructors = data_hash['Constructors']
+
+    File.open('mybudget').each do |line|
+      @budget = line.strip.to_f
+    end
   end
 
   def get_driver(driver_name)
@@ -51,7 +55,7 @@ class F1Data
 
   driversets.each do |driverset|
     (constructor_names).each do |constructor|
-      teamtemp = Team.new(self, driverset, constructor)
+      teamtemp = Team.new(self, driverset, constructor, @budget)
       arraytemp = driverset + [constructor]
 
       if myteam.nil?

@@ -1,10 +1,11 @@
 class Team
-  attr_accessor :active, :drivers, :constructor, :cost, :turbo, :points, :out, :in
+  attr_accessor :active, :drivers, :constructor, :cost, :turbo, :points, :out, :in, :cost_threshold
 
-  def initialize(data, drivernames, constructorname)
+  def initialize(data, drivernames, constructorname, budget=100)
     @active = true
     @drivers = []
     @points = 0
+    @cost_threshold = budget
 
     drivernames.each do |drivername|
       tempdriver = Driver.new(data.get_driver(drivername), drivername)
@@ -38,8 +39,6 @@ class Team
   private
 
   def is_under_cost_threshold
-    threshold = 100
-
     drivercost = 0
     teamcost = @constructor.cost
 
@@ -50,7 +49,7 @@ class Team
     @cost = drivercost + teamcost
 
     @cost = @cost.round(2)
-    if @cost > threshold
+    if @cost > @cost_threshold
       @active = false
     end
   end
