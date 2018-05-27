@@ -63,8 +63,8 @@ end
 def print_table_header(type=:header)
   drivercolumn = ' '*26 + 'DRIVERS' + ' '*26
   vdivider = '| '
-  constructorscolumn = ' '*5 + 'CONSTRUCTOR' + ' '*5
-  averagepointsheader = ' '* 5 + 'Avg Pts' + ' '* 5
+  constructorscolumn = ' '*2 + 'CONSTRUCTOR' + ' '*2
+  averagepointsheader = ' '* 2 + 'Avg Pts' + ' '* 2
   costheader = ' COST '
   header = vdivider + drivercolumn + vdivider + constructorscolumn + vdivider\
   + averagepointsheader + vdivider + costheader + vdivider
@@ -89,9 +89,9 @@ end
 def printrow(drivers, constructor, cost, averagepointsperrace)
   vdivider = '| '
   drivers = drivers + (' ' * (59 - drivers.length))
-  constructor = constructor + (' ' * (21 - constructor.length))
+  constructor = constructor + (' ' * (15 - constructor.length))
   cost = cost.to_s + (' ' * (6-cost.to_s.length))
-  averagepointsperrace = averagepointsperrace.to_s + (' ' * (17-averagepointsperrace.to_s.length))
+  averagepointsperrace = averagepointsperrace.to_s + (' ' * (11-averagepointsperrace.to_s.length))
 
   row = vdivider + drivers + vdivider + constructor + vdivider + averagepointsperrace + vdivider\
  + cost + vdivider
@@ -102,10 +102,10 @@ end
 def print_interrace_table_header(type=:header)
   drivercolumn = ' '*26 + 'DRIVERS' + ' '*26
   vdivider = '| '
-  constructorscolumn = ' '*5 + 'CONSTRUCTOR' + ' '*5
+  constructorscolumn = ' '*2 + 'CONSTRUCTOR' + ' '*2
   teamoutcolumn = ' '*6 + 'OUT' + ' '*6
   teamincolumn = ' '*6 + 'IN' + ' '*6
-  averagepointsheader = ' '* 5 + 'Avg Pts' + ' '* 5
+  averagepointsheader = ' '* 2 + 'Avg Pts' + ' '* 2
   costheader = ' COST '
   header = vdivider + drivercolumn + vdivider + constructorscolumn + vdivider\
   + teamoutcolumn + vdivider + teamincolumn + vdivider +\
@@ -130,11 +130,11 @@ end
 def print_interrace_row(drivers, constructor, cost, averagepointsperrace, teamout, teamin)
   vdivider = '| '
   drivers = drivers + (' ' * (59 - drivers.length))
-  constructor = constructor + (' ' * (21 - constructor.length))
+  constructor = constructor + (' ' * (15 - constructor.length))
   cost = cost.to_s + (' ' * (6-cost.to_s.length))
   teamout = teamout + (' ' * (15 - teamout.length))
   teamin = teamin + (' '* (14 - teamin.length))
-  averagepointsperrace = averagepointsperrace.to_s + (' ' * (17-averagepointsperrace.to_s.length))
+  averagepointsperrace = averagepointsperrace.to_s + (' ' * (11-averagepointsperrace.to_s.length))
 
   row = vdivider + drivers + vdivider + constructor + vdivider + teamout +\
 vdivider + teamin + vdivider+ averagepointsperrace + vdivider\
