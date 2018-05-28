@@ -17,4 +17,4 @@ Sometimes the script will give a team that you can't afford, or it'll give a pri
 
 I've contacted playon about this and apparently it's "not a bug" at their end; your budget cap changes per race by design and I've no idea why, nor can I see it in the rules. 
 
-Until the logic behind this is figured out I've added a new file; mybudget; if you put a number here it will use this instead as your budget cap.
+Until the logic behind this is figured out I've added a new file: mybudget. if you put a number here it will use this instead as your budget cap.
