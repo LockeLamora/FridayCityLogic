@@ -17,16 +17,19 @@ def generate_inter_change_suggestions
     myteam.push(line.strip)
   end
 
-  teamerrors= @data.valid_input_check(myteam)
-  if teamerrors.length > 0
-    print_team_errors(teamerrors)
-    exit
+  unless myteam[0].nil? || myteam[0].empty?
+
+    teamerrors= @data.valid_input_check(myteam)
+    if teamerrors.length > 0
+      print_team_errors(teamerrors)
+      exit
+    end
+
+   print_current_team(myteam)
+
+    teams = @data.generate_teams_list(myteam)
+    print_interrace_teams(teams)
   end
-
- print_current_team(myteam)
-
-  teams = @data.generate_teams_list(myteam)
-  print_interrace_teams(teams)
 end
 
 def generate_initial_teams

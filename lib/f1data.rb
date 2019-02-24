@@ -40,7 +40,7 @@ class F1Data
         errors.push(term)
       end
     end
-
+    puts myteam
     if !get_constructor(myteam[5])
       errors.push(myteam[5])
     end
