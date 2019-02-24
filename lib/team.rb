@@ -56,11 +56,11 @@ class Team
 
   def calculate_points
     drivers.each do |driver|
-      @points += driver.averagepointsperrace
+      @points += driver.averagepointsperrace + driver.past_avg_points
     end
 
-    @points += @constructor.averagepointsperrace
-    @points += @turbo.averagepointsperrace
+    @points += @constructor.averagepointsperrace + @constructor.past_avg_points
+    @points += @turbo.averagepointsperrace + @turbo.past_avg_points
   end
 
   def calculate_turbo_driver
