@@ -8,27 +8,30 @@ require_relative 'lib/output'
 @data = F1Data.new()
 
 def generate_inter_change_suggestions
-  if !File.exist?('myteam')
-    return
-  end
-
-  myteam = []
-  File.open('myteam').each do |line|
-    myteam.push(line.strip)
-  end
-
-  unless myteam[0].nil? || myteam[0].empty?
-
-    teamerrors= @data.valid_input_check(myteam)
-    if teamerrors.length > 0
-      print_team_errors(teamerrors)
-      exit
+  for i in (1..3) do
+    filename = 'myteam'+i.to_s
+    puts filename
+    if !File.exist?(filename)
+      return
+    end
+    myteam = []
+    File.open(filename).each do |line|
+      myteam.push(line.strip)
     end
 
-   print_current_team(myteam)
+    unless myteam[0].nil? || myteam[0].empty?
 
-    teams = @data.generate_teams_list(myteam)
-    print_interrace_teams(teams)
+      teamerrors= @data.valid_input_check(myteam)
+      if teamerrors.length > 0
+        print_team_errors(teamerrors)
+        exit
+      end
+
+     print_current_team(myteam)
+
+      teams = @data.generate_teams_list(myteam)
+      print_interrace_teams(teams)
+    end
   end
 end
 
