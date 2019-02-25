@@ -35,14 +35,13 @@ class F1Data
 
   def valid_input_check(myteam)
     errors=[]
-    myteam[0..4].each do |term|
+    myteam['drivers'].each do |term|
       if !get_driver(term)
         errors.push(term)
       end
     end
-    puts myteam
-    if !get_constructor(myteam[5])
-      errors.push(myteam[5])
+    if !get_constructor(myteam['constructor'])
+      errors.push(myteam['constructor'])
     end
 
     errors
@@ -52,17 +51,24 @@ class F1Data
   teams = []
   driversets = generate_driverset
   constructor_names = generate_constructorset
-
+  unless myteam.nil?
+    wholeteam = myteam['drivers'] + [myteam['constructor']]
+    driver_cost = myteam['drivers'].map { |d| @drivers[d]['cost']}.inject(0) { |x,y| x+y }
+    constructor_cost = @constructors[myteam['constructor']]['cost']
+    budget = driver_cost + constructor_cost + (myteam['remaining_budget'] || 0)
+  else
+    budget = @budget
+  end
   driversets.each do |driverset|
     (constructor_names).each do |constructor|
-      teamtemp = Team.new(self, driverset, constructor, @budget)
+      teamtemp = Team.new(self, driverset, constructor, budget)
       arraytemp = driverset + [constructor]
 
       if myteam.nil?
         teams.push teamtemp
-      elsif (myteam & arraytemp).length >= 5
-        teamtemp.set_out( myteam - arraytemp)
-        teamtemp.set_in( arraytemp - myteam)
+      elsif (wholeteam & arraytemp).length >= 5
+        teamtemp.set_out( wholeteam - arraytemp)
+        teamtemp.set_in( arraytemp - wholeteam)
         teams.push teamtemp
       end
     end

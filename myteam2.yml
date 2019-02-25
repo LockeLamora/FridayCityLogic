@@ -1,0 +1,8 @@
+drivers:
+  - hamilton
+  - raikkonen
+  - ricciardo
+  - sainz
+  - stroll
+constructor: mercedes
+remaining_budget: 1.3

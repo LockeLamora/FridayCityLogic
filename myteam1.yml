@@ -1,0 +1,8 @@
+drivers: 
+  - bottas
+  - leclerc
+  - raikkonen
+  - sainz
+  - stroll
+constructor: ferrari
+remaining_budget: 1.8

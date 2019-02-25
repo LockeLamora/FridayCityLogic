@@ -50,7 +50,7 @@ end
 
 def print_current_team(myteam)
   print_header 'Your current team:'
-  puts myteam
+  puts "#{myteam['drivers'].join(', ')}, #{myteam['constructor']}"
 end
 
 def print_header(text)

@@ -1,0 +1,8 @@
+drivers:
+  - leclerc
+  - vettel
+  - kubica
+  - kvyat
+  - albon
+constructor: ferrari
+remaining_budget: 0.4
