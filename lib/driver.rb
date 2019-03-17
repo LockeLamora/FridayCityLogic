@@ -15,7 +15,7 @@ class Driver
     race_count = driverdata['points_history'].length
     @averagepointsperrace = race_count == 0 ? 0 : points / race_count
 
-    if driverdata['2018_points_history'].nil?
+    if driverdata['2018_points_history'].nil? || race_count > 0
       @past_avg_points = 0 
     else
       past_points = driverdata['2018_points_history'].inject(0) { |s, x| s + x }

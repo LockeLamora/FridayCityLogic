@@ -14,7 +14,7 @@ class Constructor
     past_points = constructordata['2018_points_history'].inject(0) { |sum, x| sum + x }
     race_count = constructordata['points_history'].length
     @averagepointsperrace = race_count == 0 ? 0 : points / race_count
-    @past_avg_points = past_points / 21
+    @past_avg_points = race_count > 0 ?  0 : past_points / 21
   end
 
 end
