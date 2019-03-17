@@ -76,7 +76,7 @@
     },
     "sainz" : {
       "cost": 7.7,
-      "points_history": [-13],
+      "points_history": [-14],
       "2018_points_history": [  9,   3,   8,  26,  21,   6,  12,  30,   5, -14,  -1,   9,  15,  15,  18,   0,  15,  17]
     },
     "stroll" : {
@@ -123,7 +123,7 @@
     },
     "red bull": {
       "cost" : 25,
-      "points_history": [],
+      "points_history": [40],
       "2018_points_history": [ 45, 11, 64, 19, 50, 52, 62, 57, 53, 21, 25, 32, 37, 22, 48, 44, 62, 40]
     },
     "renault": {
