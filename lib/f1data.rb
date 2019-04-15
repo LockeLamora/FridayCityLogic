@@ -74,7 +74,10 @@ class F1Data
     end
   end
 
-  teams.sort_by {|team| team.points}.reverse!
+  teams = teams.sort_by {|team| team.points}.reverse!
+  my_team_index = teams.index { |t| t.out == 'N/A' }
+  teams.slice!((my_team_index + 1)..-1) unless my_team_index.nil?
+  teams
   end
 
   private
