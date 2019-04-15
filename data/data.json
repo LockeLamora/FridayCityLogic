@@ -97,53 +97,53 @@
   },
   "Constructors" : {
      "ferrari": {
-      "cost" : 28.9,
-      "points_history": [42, 42],
+      "cost" : 29,
+      "points_history": [42, 42, 61],
       "2018_points_history": [ 67, 51, 34, 55, 32, 59, 55, 58, 69, 67, 40, 65, 48, 51, 52, 60, 37, 71]
     },
     "racing point": {
-      "cost" : 9.7,
-      "points_history": [13, 22],
+      "cost" : 9.8,
+      "points_history": [13, 22, 25],
       "2018_points_history": [ 12,  2,  4, 39, 17, 17,  4,  4, 39, 25, 43, 20, 33, 37,  3,  9, 33, 31]
     },
     "haas": {
-      "cost" : 9.5,
-      "points_history": [26, 5],
+      "cost" : 9.4,
+      "points_history": [26, 5, 6],
       "2018_points_history": [ 15, 28,  1,  7, 22, 21, 12, 23, 46, 17, 17, 22, 29,  6, -3, 10, 10,  8]
     },
     "mclaren": {
-      "cost" : 7.2,
-      "points_history": [0, 17],
+      "cost" : 7.6,
+      "points_history": [0, 17, 3],
       "2018_points_history": [ 31, 36, 26, 33, 13,  8,  4, 14, 18, 29, 10, 14, 13, 14, 29,  7, 20, 13]
     },
     "mercedes": {
-      "cost" : 32,
-      "points_history": [70, 74],
+      "cost" : 32.2,
+      "points_history": [70, 74, 85],
       "2018_points_history": [ 49, 69, 55, 42, 70, 52, 60, 48, 30, 53, 69, 66, 57, 74, 72, 70, 75, 52]
     },
     "red bull": {
-      "cost" : 24.9,
-      "points_history": [40, 41],
+      "cost" : 24.7,
+      "points_history": [40, 41, 41],
       "2018_points_history": [ 45, 11, 64, 19, 50, 52, 62, 57, 53, 21, 25, 32, 37, 22, 48, 44, 62, 40]
     },
     "renault": {
-      "cost" : 12.5,
-      "points_history": [19, -5],
+      "cost" : 12.4,
+      "points_history": [19, -5, 20],
       "2018_points_history": [ 22, 20, 26, 28, 17, 17, 26, 31,  4, 22, 21,  9, 14, 23, 21,  1, 11, 35]
     },
     "alfa romeo": {
       "cost" : 9.5,
-      "points_history": [14, 26],
+      "points_history": [14, 26, 22],
       "2018_points_history": [ -2, 28, 12, 33, 22, 11, 18, 11, 28,  7,  9,  3, 12, 18, 22, 13, 14, 18]
     },
     "toro rosso": {
-      "cost" : 6.6,
-      "points_history": [16, 20],
+      "cost" : 6.5,
+      "points_history": [16, 20, 14],
       "2018_points_history": [-10, 21,  3, 24, 13, 15, 14, 14,  6,  5, 25, 18,  7, -3,  9,  3, -1, 28]
     },
     "williams": {
-      "cost" : 6.4,
-      "points_history": [16, 20],
+      "cost" : 6.1,
+      "points_history": [16, 20, 8],
       "2018_points_history": [-12, 20, 19, 13, 24,  2,  3, 14, 10, 23,  3, 17, 16, 17, 14, -2,  4,  8]
     }
   }
