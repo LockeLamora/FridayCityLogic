@@ -1,97 +1,97 @@
 {
   "Drivers" : {
     "albon" : {
-      "cost": 6.2,
-      "points_history": [4, 16]
+      "cost": 6.7,
+      "points_history": [4, 16, 10]
     },
     "bottas" : {
-      "cost": 20.8,
-      "points_history": [48, 33],
+      "cost": 21.2,
+      "points_history": [48, 33, 32],
       "2018_points_history": [ 19,  37,  37,   7,  31,  20,  36,  19,   0,  23,  33,  17,  37,  38,  23,  37,  31,  22]
     },
     "gasly" : {
-      "cost": 17.4,
-      "points_history": [12, 17],
+      "cost": 17,
+      "points_history": [12, 17, 22],
       "2018_points_history": [-14,  28,   4,  14, -11,  22,  15, -11,  10,  10,  14,  22,  12,   1,  12, -11,   3,  15]
     },
     "giovinazzi" : {
-      "cost": 6.7,
-      "points_history": [2, 12]
+      "cost": 6.9,
+      "points_history": [2, 12, 4]
     },
     "grosjean" : {
-      "cost": 9.1,
-      "points_history": [-5, -9],
+      "cost": 8.7,
+      "points_history": [-5, -9, 6],
       "2018_points_history": [ -8,   8,  -3, -20, -11,  11,   9,   3,  28,  -9,  20,  11,  17, -10,   2,   2,  18,  -4]
     },
     "hamilton" : {
-      "cost": 30.3,
-      "points_history": [32, 46],
+      "cost": 30.4,
+      "points_history": [32, 46, 43],
       "2018_points_history": [ 35,  36,  23,  45,  44,  32,  19,  59,  -3,  35,  46,  44,  35,  61,  44,  48,  44,  35]
     },
     "hulkenberg" : {
-      "cost": 11.8,
-      "points_history": [22, 5],
+      "cost": 11.9,
+      "points_history": [22, 5, -4],
       "2018_points_history": [ 18,  22,  23,  -8, -14,  16,  19,  11, -11,  26,  27,   5, -11,  13,   8,   6, -14,  23]
     },
     "kubica" : {
-      "cost": 5.3,
-      "points_history": [8, 10]
+      "cost": 5.6,
+      "points_history": [8, 10, 4]
     },
     "kvyat" : {
-      "cost": 5.6,
-      "points_history": [17, 9]
+      "cost": 5.7,
+      "points_history": [17, 9, -11]
     },
     "leclerc" : {
-      "cost": 23.3,
-      "points_history": [20, 5],
+      "cost": 24,
+      "points_history": [20, 5, 19],
       "2018_points_history": [ 15,  12,   4,  26,  17,   1,  15,   9,  20,  -8,  -2, -14, -11,  15,  18,  19, -11,  -8]
     },
     "magnussen" : {
       "cost": 10,
-      "points_history": [21, 4],
+      "points_history": [21, 4, 0],
       "2018_points_history": [ -5,  25,   9,  12,  23,  15,   3,  25,  23,  11,   2,  26,  12,   1,   5,  13, -13, -18]
     },
     "norris" : {
-      "cost": 7.1,
-      "points_history": [4, 22]
+      "cost": 7.4,
+      "points_history": [4, 22, 0]
     },
     "perez" : {
-      "cost": 10.9,
-      "points_history": [1, 17],
+      "cost": 10.8,
+      "points_history": [1, 17, 20],
       "2018_points_history": [ 10,  -1,   1,  35,  18,   0,  -3, -13,  18,   8,  22,  10,  22,  18,   3,   4,  18,  16]
     },
     "raikkonen" : {
-      "cost": 10,
-      "points_history": [1, 35],
+      "cost": 10.3,
+      "points_history": [1, 35, 18],
       "2018_points_history": [ 28,  -3,  29,  38,  -5,  23,  16,  38,  39,  37,  30,  29,  -2,  35,  20,  23,  24,  57]
     },
     "ricciardo" : {
-      "cost": 11.8,
-      "points_history": [-13, -5],
+      "cost": 12,
+      "points_history": [-13, -5, 19],
       "2018_points_history": [ 33,  -4,  47,  -3,  26,  44,  25,  29,  -8,  24, -13,  33,  -9, -13,  17,  21,  25,  -4]
     },
     "russell" : {
-      "cost": 6.1,
-      "points_history": [13, 15]
+      "cost": 6.3,
+      "points_history": [13, 15, 9]
     },
     "sainz" : {
-      "cost": 7.8,
-      "points_history": [-14, 0],
+      "cost": 6.8,
+      "points_history": [-14, 0, 8],
       "2018_points_history": [  9,   3,   8,  26,  21,   6,  12,  30,   5, -14,  -1,   9,  15,  15,  18,   0,  15,  17]
     },
     "stroll" : {
       "cost": 7.5,
-      "points_history": [17, 10],
+      "points_history": [17, 10, 10],
       "2018_points_history": [  7,  15,  13,  16,  15,   2, -12,   6,   4,   9, -14,  11,   8,  14,  15,   4,   2,   4]
     },
     "verstappen" : {
-      "cost": 24.4,
-      "points_history": [33, 29],
+      "cost": 24.5,
+      "points_history": [33, 29, 29],
       "2018_points_history": [ 17, -13,  22,  -6,  34,  13,  37,  38,  56,   2,  33,  -6,  36,  25,  36,  28,  42,  34]
     },
     "vettel" : {
-      "cost": 27.3,
-      "points_history": [27, 17],
+      "cost": 27.5,
+      "points_history": [27, 17, 32],
       "2018_points_history": [ 44,  44,  10,  22,  27,  36,  44,  35,  35,  50,   0,  36,  50,  21,  32,  42,  23,  34]
     }
   },
