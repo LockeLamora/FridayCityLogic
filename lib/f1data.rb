@@ -10,9 +10,7 @@ class F1Data
     @drivers = data_hash['Drivers']
     @constructors = data_hash['Constructors']
 
-    File.open('mybudget').each do |line|
-      @budget = line.strip.to_f
-    end
+    @budget = 100
   end
 
   def get_driver(driver_name)
