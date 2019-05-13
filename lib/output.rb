@@ -49,7 +49,7 @@ def print_team_errors(errors)
 end
 
 def print_current_team(myteam)
-  print_header 'Your current team:'
+  print_header "Your current team: #{myteam['name']}"
   puts "#{myteam['drivers'].join(', ')}, #{myteam['constructor']}"
 end
 
